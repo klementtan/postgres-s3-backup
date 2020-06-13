@@ -2,7 +2,7 @@
 rm -rf venv
 if [ -x "$(command -v virtualenv)" ]; then
   virtualenv venv
-  souce venv/bin/activate
+  ./venv/bin/activate
   pip3 install -r requirements.txt
 elif [ -x "$(command -v pip3)" ]; then
   sudo pip3 install virtualenv
