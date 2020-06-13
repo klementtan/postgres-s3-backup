@@ -1,8 +1,8 @@
 #!/bin/bash
 
-if ![ -x "$(command -v virtualenv)" ]; then
+if [ -x "$(command -v virtualenv)" ]; then
   virtualenv venv
-elif ![ -x "$(command -v pip3)" ]; then
+elif [ -x "$(command -v pip3)" ]; then
   sudo pip3 install virtualenv
   virtualenv venv 
 else 
