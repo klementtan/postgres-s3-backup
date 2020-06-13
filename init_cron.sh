@@ -20,7 +20,7 @@ else
   pip install -r requirements.txte
 fi
 
-source venv
+source venv/bin/activate
 
 cwd=$(pwd)
 
