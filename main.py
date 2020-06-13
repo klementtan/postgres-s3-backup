@@ -59,7 +59,7 @@ def main():
     get_db_dump()
     s3 = get_s3()
     upload_dump(s3)
-    logging.info('Uploaded dump to db')
+    print('Uploaded dump to db')
     os.system( f"rm -rf {file_name}")
   except Exception as e:
     send_notification(str(e))
