@@ -5,11 +5,12 @@ if [ -x "$(command -v virtualenv)" ]; then
 elif [ -x "$(command -v pip3)" ]; then
   sudo pip3 install virtualenv
   virtualenv venv 
-  ./venv/bin/activate
+  souce venv/bin/activate
   pip3 install -r requirements.txt
 else 
   sudo pip install virtualenv
   virtualenv venv 
+  souce ./venv/bin/activate
   pip install -r requirements.txt 
 fi
 
