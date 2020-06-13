@@ -15,7 +15,11 @@ file_name = f"{env('DB_NAME')}_{date.today().strftime('%d-%m-%Y')}.dump"
 
 def get_db_dump():
   os.system(
-    f"PGPASSWORD={env('DB_PASSWORD')} pg_dump {env('DB_NAME')} -U {env('DB_USERNAME')} -h {env('DB_HOST')} -p {env('DB_PORT')} > {file_name}"
+    f"PGPASSWORD={env('DB_PASSWORD')} \
+      pg_dump {env('DB_NAME')} \
+      -U {env('DB_USERNAME')} \
+      -h {env('DB_HOST')} \
+      -p {env('DB_PORT')} > {file_name}"
   )
 
 def get_s3():
