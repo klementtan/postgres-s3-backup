@@ -3,15 +3,15 @@
 rm -rf venv
 if [ -x "$(command -v virtualenv)" ]; then
   virtualenv venv
-  soucre venv/bin/activate
+  . venv/bin/activate
 elif [ -x "$(command -v pip3)" ]; then
   sudo pip3 install virtualenv
   virtualenv venv
-  souce venv/bin/activate
+  . venv/bin/activate
 else
   sudo pip install virtualenv
   virtualenv venv
-  souce ./venv/bin/activate
+  . /venv/bin/activate
 fi
 
 if [ -x "$(command -v pip3)" ]; then
@@ -19,8 +19,6 @@ if [ -x "$(command -v pip3)" ]; then
 else
   pip install -r requirements.txte
 fi
-
-source venv/bin/activate
 
 cwd=$(pwd)
 
