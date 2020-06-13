@@ -4,7 +4,7 @@ import boto3
 from botocore.exceptions import ClientError
 import os
 import logging
-import pdb
+
 load_dotenv()
 
 
